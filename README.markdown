@@ -23,21 +23,21 @@ Usage
 
 ### Basic JSON usage
 
-`$jsonData = $some_json_string_from_twitter
+    $jsonData = $some_json_string_from_twitter
 
-$tb = new TwitterBadge();
+    $tb = new TwitterBadge();
 
-echo $tb->parseJSON( $jsonData );`
+    echo $tb->parseJSON( $jsonData );
 
 ### Basic Object usage
 
-`$jsonData = $some_json_string_from_twitter
+    $jsonData = $some_json_string_from_twitter
 
-$dataObject = json_decode ($jsonData);
+    $dataObject = json_decode ($jsonData);
 
-$tb = new TwitterBadge();
+    $tb = new TwitterBadge();
 
-echo $tb->parseObject( $dataObject );`
+    echo $tb->parseObject( $dataObject );
 
 Customizing Output
 ------------------
