@@ -87,7 +87,7 @@ class TwitterBadge
       $tweetOutput = $this->_tweetFormat;
       foreach( $result[1] as $foundkey) {
         $keys = explode( '->', $foundkey);
-        $value = $tweet;  //copy tweet object for recursive lookup
+        $value = $tweet;  //copy tweet object for nested lookup
         foreach ( $keys as $key ) {
           $value = $value->$key;  //Variable variable
         }
@@ -113,8 +113,7 @@ class TwitterBadge
   }
 
   /*
-  * Set Individual Tweet Format. Insert tags into the HTML formating
-  * as [@key] or [@key->subobject] (ie. [@text] and [@user->screen_name])
+  * Set tweet list formatting. Only accepts [@tweets] tag
   * @param string format - HTML formatted string of one tweet.
   */
   public function setListFormat( $format = '<ul>[@tweets]</ul>' ) {
